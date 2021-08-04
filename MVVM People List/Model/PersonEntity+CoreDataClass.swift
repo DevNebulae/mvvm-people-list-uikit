@@ -11,5 +11,5 @@ import CoreData
 
 @objc(PersonEntity)
 public class PersonEntity: NSManagedObject {
-    public var avatar: String?
+    
 }
