@@ -15,12 +15,17 @@ class PeopleAPI {
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         return decoder
     }()
+    private let session: URLSession = {
+        let configuration = URLSessionConfiguration.ephemeral
+        let session = URLSession(configuration: configuration)
+        return session
+    }()
     
     /**
     Fetch the user's avatar from the API.
      */
     func fetchAvatar(url: URL) -> AnyPublisher<Data, Error> {
-        return URLSession.shared.dataTaskPublisher(for: url)
+        return session.dataTaskPublisher(for: url)
             .tryMap { element -> Data in
                 guard let response = element.response as? HTTPURLResponse, response.statusCode == 200 else {
                     throw URLError(.badServerResponse)
@@ -40,19 +45,13 @@ class PeopleAPI {
         urlComponents.queryItems = queryItems
         let url = urlComponents.url!
         
-        return URLSession.shared.dataTaskPublisher(for: url)
+        return session.dataTaskPublisher(for: url)
             .tryMap { element -> Data in
-                guard let response = element.response as? HTTPURLResponse else {
+                guard let response = element.response as? HTTPURLResponse, response.statusCode == 200 else {
                     throw URLError(.badServerResponse)
                 }
                 
-                if response.statusCode == 200 {
-                    return element.data
-                } else if let cachedResponse = URLSession.shared.configuration.urlCache?.cachedResponse(for: URLRequest(url: url)) {
-                    return cachedResponse.data
-                } else {
-                    throw URLError(.badServerResponse)
-                }
+                return element.data
             }
             .decode(type: PersonResponse.self, decoder: decoder)
             .eraseToAnyPublisher()
