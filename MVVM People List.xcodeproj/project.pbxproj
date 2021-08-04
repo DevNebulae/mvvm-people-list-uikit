@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		921B352A26BB3D9B000F65DE /* PersonEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921B352826BB3D9B000F65DE /* PersonEntity+CoreDataClass.swift */; };
+		921B352B26BB3D9B000F65DE /* PersonEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921B352926BB3D9B000F65DE /* PersonEntity+CoreDataProperties.swift */; };
 		9221796C26B9AF190087C3E5 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9221796B26B9AF190087C3E5 /* DetailViewController.swift */; };
 		9221797226B9B0700087C3E5 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9221797126B9B0700087C3E5 /* UIView+Extensions.swift */; };
 		9221797A26B9B1970087C3E5 /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9221797926B9B1970087C3E5 /* PersonCell.swift */; };
@@ -43,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		921B352826BB3D9B000F65DE /* PersonEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersonEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		921B352926BB3D9B000F65DE /* PersonEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersonEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		9221796B26B9AF190087C3E5 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		9221797126B9B0700087C3E5 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		9221797926B9B1970087C3E5 /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
@@ -178,6 +182,8 @@
 		92ECABFC26B9777C007D6E3D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				921B352826BB3D9B000F65DE /* PersonEntity+CoreDataClass.swift */,
+				921B352926BB3D9B000F65DE /* PersonEntity+CoreDataProperties.swift */,
 				92ECABFD26B97786007D6E3D /* Person.swift */,
 				92ECAC0726B979BB007D6E3D /* PersonResponse.swift */,
 			);
@@ -320,6 +326,8 @@
 				92ECAC1526B98179007D6E3D /* PeopleAPI.swift in Sources */,
 				92ECABBA26B974BF007D6E3D /* AppDelegate.swift in Sources */,
 				92ECABC426B974BF007D6E3D /* MVVM_People_List.xcdatamodeld in Sources */,
+				921B352A26BB3D9B000F65DE /* PersonEntity+CoreDataClass.swift in Sources */,
+				921B352B26BB3D9B000F65DE /* PersonEntity+CoreDataProperties.swift in Sources */,
 				92ECABBC26B974BF007D6E3D /* SceneDelegate.swift in Sources */,
 				9221797A26B9B1970087C3E5 /* PersonCell.swift in Sources */,
 				92ECAC0826B979BB007D6E3D /* PersonResponse.swift in Sources */,
