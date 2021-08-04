@@ -22,7 +22,7 @@ class DetailViewController: UIViewController {
         avatarImageView.circle()
         nameLabel.text = person.fullName
         emailAddressLabel.text = person.email
-        if let url = URL(string: person.avatar) {
+        if let avatar = person.avatar, let url = URL(string: avatar) {
             let task = URLSession.shared.dataTask(with: url) { data, response, error in
                 guard let data = data, error == nil else { return }
 

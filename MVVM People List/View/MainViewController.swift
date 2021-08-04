@@ -63,7 +63,7 @@ class MainViewController : UITableViewController {
         var person = viewModel.people.value[indexPath.row]
         
         cell.nameLabel.text = person.fullName
-        if let url = URL(string: person.avatar) {
+        if let avatar = person.avatar, let url = URL(string: avatar) {
             let task = URLSession.shared.dataTask(with: url) { data, response, error in
                 guard let data = data, error == nil else { return }
 
